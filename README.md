@@ -16,8 +16,8 @@ echo $BASENAME
 Name of the current folder's parent:   
 `pwd|awk -F'/' '{SL = NF-1; print $SL}'`   
 
-- resize using imagemagick
-`for f in `find . -name "*.png"`; do  convert $f -resize 640X480 $f; done`
+- resize using imagemagick  
+`find . -name "*.png" -exec convert {} -resize 400X400 {} \;`   
 can also (officially) convert b/w image formats using imagemagick 
 
 #### Renaming files (recursively)
