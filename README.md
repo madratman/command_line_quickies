@@ -20,6 +20,14 @@ Name of the current folder's parent:
 `find . -name "*.png" -exec convert {} -resize 400X400 {} \;`   
 can also (officially) convert b/w image formats using imagemagick 
 
+### don't be a git tit
+- Initialize git repo and add github remote
+```
+git init .
+base_name=$(basename $(pwd))
+git remote add github git@github.com:madratman/${base_name}.git
+```
+
 #### Renaming files (recursively)
 - Recursively list all unique file extensions (this sort of breaks if you have files with no extension)     
 `find ./ -type f | awk -F . '{print $NF}' |  sort --unique`
