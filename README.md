@@ -20,7 +20,7 @@ Name of the current folder's parent:
 `find . -name "*.png" -exec convert {} -resize 400X400 {} \;`   
 can also (officially) convert b/w image formats using imagemagick 
 
-### don't be a git tit
+#### don't be a git tit
 - Initialize git repo and add github remote
 ```
 git init .
